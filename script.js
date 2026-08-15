@@ -322,35 +322,21 @@ if(!reducedMotion){
   motionSections.forEach(section=>section.classList.add('section-motion'));
   let previousScrollY=scrollY;
   let scrollDirection='down';
-  let directionFrame=0;
   addEventListener('scroll',()=>{
-    if(directionFrame)return;
-    directionFrame=requestAnimationFrame(()=>{
-      const nextY=scrollY;
-      if(Math.abs(nextY-previousScrollY)>4){
-        scrollDirection=nextY>previousScrollY?'down':'up';
-        document.body.classList.toggle('scrolling-down',scrollDirection==='down'&&nextY>140);
-        document.body.classList.toggle('scrolling-up',scrollDirection==='up');
-      }
-      previousScrollY=nextY;
-      directionFrame=0;
-    });
+    const nextY=scrollY;
+    if(Math.abs(nextY-previousScrollY)>4)scrollDirection=nextY>previousScrollY?'down':'up';
+    previousScrollY=nextY;
   },{passive:true});
   const sectionMotionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
     const section=entry.target;
     if(entry.isIntersecting){
       section.classList.toggle('from-up',scrollDirection==='up');
-      section.classList.toggle('from-down',scrollDirection==='down');
       requestAnimationFrame(()=>section.classList.add('in-view'));
     }else{
       const rect=section.getBoundingClientRect();
-      if(rect.bottom<-160||rect.top>innerHeight+160){
-        section.classList.remove('in-view');
-        section.classList.toggle('from-up',rect.bottom<0);
-        section.classList.toggle('from-down',rect.top>innerHeight);
-      }
+      if(rect.bottom<-120||rect.top>innerHeight+120)section.classList.remove('in-view');
     }
-  }),{rootMargin:'6% 0px 6%',threshold:.035});
+  }),{rootMargin:'8% 0px 8%',threshold:.04});
   motionSections.forEach(section=>sectionMotionObserver.observe(section));
 }
 
