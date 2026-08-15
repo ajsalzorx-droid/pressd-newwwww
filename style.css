@@ -774,6 +774,13 @@ body.detail-view .menu-section .category-wrap:after{display:none}
   .category-arrow span{font-size:18px}
 }
 
+/* Product identity in the cart. */
+.cart-item{align-items:center}
+.cart-item-image{flex:0 0 76px;width:76px;height:64px;border-radius:12px;background:#e8deca;object-fit:cover;object-position:center}
+.cart-item-copy{min-width:0;flex:1}
+.cart-item-copy h3{overflow-wrap:anywhere}
+@media(max-width:560px){.cart-item-image{flex-basis:64px;width:64px;height:58px;border-radius:10px}.cart-item{gap:10px}.cart-quantity{gap:8px}.cart-quantity button{width:28px;height:28px}}
+
 /* Unified transparent PRESS'D logo alignment. */
 .logo{display:flex;align-items:center;justify-content:flex-start;width:clamp(150px,12vw,190px);height:52px;margin:0 auto 0 0;padding:0;background:transparent!important;border-radius:0;overflow:visible}
 .logo:before,.logo:after{content:none!important}
