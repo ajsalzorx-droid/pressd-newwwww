@@ -131,6 +131,42 @@ const lightbox=document.querySelector('.lightbox');document.querySelectorAll('.g
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close()}));
 
 const detailSections=[...document.querySelectorAll('main>section:not(.hero)')];
+const categoryPinSpacer=document.createElement('div');
+categoryPinSpacer.className='category-pin-spacer';
+categoryWrap.before(categoryPinSpacer);
+const categoryPinMedia=matchMedia('(max-width:760px)');
+let categoryPinStart=Infinity,categoryPinHeight=0,categoryPinFrame=0;
+const categoryPinTop=()=>innerWidth<=390?80:82;
+const restoreCategoryBar=()=>{
+  if(categoryWrap.parentElement===document.body)categoryPinSpacer.after(categoryWrap);
+  categoryWrap.classList.remove('is-pinned');
+  categoryPinSpacer.style.height='0px';
+};
+const syncCategoryPin=()=>{
+  categoryPinFrame=0;
+  const shouldPin=categoryPinMedia.matches&&document.body.classList.contains('detail-view')&&scrollY>=categoryPinStart;
+  if(shouldPin&&!categoryWrap.classList.contains('is-pinned')){
+    categoryPinSpacer.style.height=`${categoryPinHeight}px`;
+    document.body.append(categoryWrap);
+    categoryWrap.classList.add('is-pinned');
+    requestAnimationFrame(updateCategoryArrows);
+  }else if(!shouldPin&&categoryWrap.classList.contains('is-pinned'))restoreCategoryBar();
+};
+const requestCategoryPinSync=()=>{
+  if(!categoryPinFrame)categoryPinFrame=requestAnimationFrame(syncCategoryPin);
+};
+const measureCategoryPin=()=>{
+  restoreCategoryBar();
+  categoryPinStart=Infinity;
+  if(!categoryPinMedia.matches||!document.body.classList.contains('detail-view'))return;
+  const style=getComputedStyle(categoryWrap);
+  categoryPinHeight=categoryWrap.offsetHeight+parseFloat(style.marginTop||0)+parseFloat(style.marginBottom||0);
+  categoryPinStart=categoryWrap.getBoundingClientRect().top+scrollY-categoryPinTop();
+  requestCategoryPinSync();
+};
+addEventListener('scroll',requestCategoryPinSync,{passive:true});
+addEventListener('resize',()=>requestAnimationFrame(measureCategoryPin),{passive:true});
+categoryPinMedia.addEventListener?.('change',measureCategoryPin);
 const openRelatedSection=(target,behavior='smooth')=>{
   detailSections.forEach(section=>section.classList.toggle('active-detail',section===target));
   document.body.classList.remove('home-view');
@@ -138,9 +174,11 @@ const openRelatedSection=(target,behavior='smooth')=>{
   requestAnimationFrame(()=>{
     window.scrollTo({top:0,behavior:'auto'});
     target.scrollTop=0;
+    requestAnimationFrame(measureCategoryPin);
   });
 };
 const openHome=()=>{
+  restoreCategoryBar();
   detailSections.forEach(section=>section.classList.remove('active-detail'));
   document.body.classList.remove('detail-view');
   document.body.classList.add('home-view');
