@@ -4,7 +4,7 @@ module.exports=async function handler(request,response){
   if(request.method!=='POST')return response.status(405).json({error:'Method not allowed'});
   const token=process.env.WHATSAPP_ACCESS_TOKEN;
   const phoneNumberId=process.env.WHATSAPP_PHONE_NUMBER_ID;
-  const recipient=(process.env.WHATSAPP_ORDER_RECIPIENT||'').replace(/\D/g,'');
+  const recipient=(process.env.WHATSAPP_ORDER_RECIPIENT||'971543962660').replace(/\D/g,'');
   const graphVersion=process.env.WHATSAPP_GRAPH_VERSION||'v23.0';
   const templateName=process.env.WHATSAPP_ORDER_TEMPLATE||'';
   const templateLanguage=process.env.WHATSAPP_TEMPLATE_LANGUAGE||'en';
