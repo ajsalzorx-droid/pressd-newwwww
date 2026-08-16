@@ -903,3 +903,39 @@ body.detail-view .menu-section .category-wrap:after{display:none}
   .menu-img img,body.detail-view .menu-section .menu-img img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
   .menu-card-info,body.detail-view .menu-section .menu-card-info{flex:1;width:100%}
 }
+
+/* Sticky right-side navigation drawer for tablet and mobile. */
+@media(max-width:1100px){
+  .navbar,.navbar.scrolled,body.detail-view .navbar{position:fixed!important;z-index:96!important}
+  .menu-toggle{position:relative;z-index:98;display:block!important;margin-left:0;cursor:pointer}
+  .mobile-menu{
+    display:flex;
+    position:fixed;
+    z-index:95;
+    top:0;
+    right:0;
+    bottom:0;
+    left:auto;
+    width:min(430px,90vw);
+    padding:112px 28px max(30px,env(safe-area-inset-bottom));
+    flex-direction:column;
+    justify-content:space-between;
+    background:rgba(5,6,5,.98);
+    color:var(--cream);
+    border-left:1px solid rgba(251,176,25,.48);
+    box-shadow:-28px 0 70px rgba(0,0,0,.48);
+    backdrop-filter:blur(18px);
+    transform:translateX(105%);
+    transition:transform .55s var(--ease),visibility .55s;
+    visibility:hidden;
+  }
+  .mobile-menu.open{transform:translateX(0);visibility:visible}
+  .mobile-menu nav{display:grid}
+  .mobile-menu nav a{color:var(--cream);border-bottom:1px solid rgba(247,241,230,.16)}
+  .mobile-menu nav a:hover{color:var(--orange);padding-left:8px}
+  .mobile-menu p{color:rgba(247,241,230,.68)}
+}
+
+@media(max-width:560px){
+  .mobile-menu{width:min(360px,92vw);padding:100px 22px max(24px,env(safe-area-inset-bottom))}
+}
