@@ -228,6 +228,7 @@ const openRelatedSection=(target,behavior='smooth')=>{
   detailSections.forEach(section=>section.classList.toggle('active-detail',section===target));
   document.body.classList.remove('home-view');
   document.body.classList.add('detail-view');
+  document.body.classList.toggle('menu-detail-view',target.id==='menu');
   requestAnimationFrame(()=>{
     window.scrollTo({top:0,behavior:'auto'});
     target.scrollTop=0;
@@ -237,7 +238,7 @@ const openRelatedSection=(target,behavior='smooth')=>{
 const openHome=()=>{
   restoreCategoryBar();
   detailSections.forEach(section=>section.classList.remove('active-detail'));
-  document.body.classList.remove('detail-view');
+  document.body.classList.remove('detail-view','menu-detail-view');
   document.body.classList.add('home-view');
   window.scrollTo({top:0,behavior:reducedMotion?'auto':'smooth'});
 };
