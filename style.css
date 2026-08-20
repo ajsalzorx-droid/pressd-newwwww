@@ -1020,6 +1020,30 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
   .instructions-modal form>div{display:grid;grid-template-columns:1fr 1.25fr}
   .cart-drawer{width:100%;padding:20px 16px}.cart-item{gap:11px}.cart-item-image{width:72px;height:72px}
 }
+
+/* Premium customization layout adapted from the supplied component */
+.customize-modal{box-sizing:border-box;width:min(960px,96vw);max-height:94dvh;padding:34px 36px 32px;border-radius:30px;overflow-x:hidden;overflow-y:auto}
+.customize-modal .close-btn{top:22px;right:22px;width:50px;height:50px}
+.customize-modal .modal-header{margin-bottom:28px;padding-right:64px;text-align:left}
+.customize-modal .modal-header h2{margin-block:5px 0;line-height:.96}
+.customize-modal .product-name{margin-top:10px;color:#9a6410}
+.customize-modal .customize-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px 24px}
+.customize-modal .coffee-section,.customize-modal .add-on-section{grid-column:1}
+.customize-modal .milk-section,.customize-modal .comment-section{grid-column:2}
+.customize-modal .bottom-options{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.customize-modal .bottom-options .custom-section{grid-column:auto}
+.customize-modal .option-card{min-height:53px}
+.customize-modal .comment-section textarea{min-height:145px}
+.customize-modal .save-btn{width:100%;min-height:55px;margin-top:30px}
+
+@media(max-width:639px){
+  .customize-modal .bottom-options{display:block;width:100%}
+  .customize-modal .bottom-options .custom-section{width:100%;margin:0 0 22px!important}
+  .customize-modal .coffee-options{overflow-x:auto!important}
+  .customize-modal .coffee-options .option-card{flex:0 0 auto!important;width:auto!important;min-width:max-content!important}
+  .customize-modal .comment-section textarea{min-height:110px}
+  .customize-modal .save-btn{min-height:46px;margin-top:0}
+}
 @media(max-width:370px){
   .navbar .logo{max-width:108px}.navbar .cart-toggle{min-width:56px}
   .menu-card-info,body.detail-view .menu-section .menu-card-info{grid-template-columns:minmax(0,1fr) 70px;padding:14px 12px}
@@ -1231,6 +1255,10 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
   .menu-section .menu-intro,.menu-section .menu-content{max-width:960px!important;padding-inline:22px!important}
 }
 
+/* Priced Hot and Ice Beverage customization groups */
+.customize-modal .option-card b{flex:0 0 auto;margin-left:8px;color:#9a6410;font-size:8px;font-weight:850;white-space:nowrap}.customize-modal .coffee-section{grid-column:1/7}.customize-modal .milk-section{grid-column:7/13}.customize-modal .add-on-section{grid-column:1/7}.customize-modal .temperature-section{grid-column:7/10}.customize-modal .service-section{grid-column:10/13}.customize-modal .comment-section{grid-column:1/13}.customize-modal .temperature-options,.customize-modal .service-options{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+@media(max-width:639px){.customize-modal .coffee-section,.customize-modal .milk-section,.customize-modal .add-on-section,.customize-modal .temperature-section,.customize-modal .service-section,.customize-modal .comment-section{grid-column:auto}.customize-modal .temperature-options,.customize-modal .service-options{display:flex!important;grid-template-columns:none!important}.customize-modal .option-card b{font-size:9px}}
+
 /* Mobile-only Customize Your Drink layout */
 @media(max-width:639px){
   .customize-modal{box-sizing:border-box;width:calc(100% - 24px)!important;max-width:430px!important;height:auto!important;max-height:calc(100dvh - 24px)!important;margin:12px auto!important;padding:24px 18px 18px!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain;border-radius:22px!important}
@@ -1254,4 +1282,27 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
   .customize-modal .comment-section>p{margin:0 0 10px!important;font-size:11px!important;line-height:1.45;text-align:left}
   .customize-modal .comment-section textarea{box-sizing:border-box;width:100%!important;min-height:110px!important;height:110px!important;padding:12px 13px!important;font-size:13px!important}
   .customize-modal .save-btn{display:block;width:100%!important;min-height:46px!important;margin:0!important;padding:12px 16px!important}
+}
+
+/* Final premium customization composition */
+@media(min-width:640px){
+  .customize-modal{box-sizing:border-box;width:min(960px,96vw);max-height:94dvh;padding:34px 36px 32px;border-radius:30px;overflow-x:hidden;overflow-y:auto}
+  .customize-modal .close-btn{top:22px;right:22px;width:50px;height:50px}
+  .customize-modal .modal-header{margin-bottom:28px;padding-right:64px;text-align:left}
+  .customize-modal .modal-header h2{margin-block:5px 0;line-height:.96}
+  .customize-modal .product-name{margin-top:10px;color:#9a6410}
+  .customize-modal .customize-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:30px 24px}
+  .customize-modal .coffee-section,.customize-modal .add-on-section{grid-column:1!important}
+  .customize-modal .milk-section,.customize-modal .comment-section{grid-column:2!important}
+  .customize-modal .bottom-options{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+  .customize-modal .bottom-options .custom-section{grid-column:auto}
+  .customize-modal .option-card{min-height:53px}
+  .customize-modal .comment-section textarea{min-height:145px}
+  .customize-modal .save-btn{width:100%;min-height:55px;margin-top:30px}
+}
+@media(max-width:639px){
+  .customize-modal .bottom-options{display:block;width:100%}
+  .customize-modal .bottom-options .custom-section{width:100%;margin:0 0 22px!important}
+  .customize-modal .coffee-options{overflow-x:auto!important}
+  .customize-modal .coffee-options .option-card{flex:0 0 auto!important;width:auto!important;min-width:max-content!important}
 }
