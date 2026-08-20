@@ -82,14 +82,17 @@ const isMojito=item=>/Mojito/i.test(item[0]);
 const isIcedTea=item=>/Iced? Tea/i.test(item[0]);
 const isRefreshing=item=>['Evian Water','Perrier Sparkling Water','Perrier Sparkling Water with Lemon','Vitamin Well Upgrade','C4 Energy Drink'].includes(item[0]);
 const isIcedCoffee=item=>!isMojito(item)&&!isIcedTea(item)&&!isRefreshing(item);
+const icedCoffeeItems=coldItems.filter(isIcedCoffee);
+const icedCoffeeLastRow=['Cold Drip Coffee','Iced V60'];
+const orderedIcedCoffee=[...icedCoffeeItems.filter(item=>!icedCoffeeLastRow.includes(item[0])),...icedCoffeeItems.filter(item=>icedCoffeeLastRow.includes(item[0]))];
 menu=[
   {category:'Fresh Start',slug:'fresh-start',tagline:'Breakfast · bowls · salads',items:[...tagged('Breakfast','Breakfast'),...tagged('Healthy Bowls','Bowls'),...tagged('Salads','Salads'),...tagged('Cakes & Pastries','Cakes & Pastries')]},
   {category:'Hot Beverages',slug:'hot-beverages',tagline:'Coffee · teas · warm moments',items:[...tagged('Hot Beverages','Coffee',item=>!/Tea/i.test(item[0])),...tagged('Hot Beverages','Teas',item=>/Tea/i.test(item[0]))]},
-  {category:'Ice Beverages',slug:'ice-beverages',tagline:'Iced coffee · frappe',items:[...coldItems.filter(isIcedCoffee).map(item=>{item[6]='Iced Coffee';return item}),...tagged('Frappes','Frappe')]},
+  {category:'Ice Beverages',slug:'ice-beverages',tagline:'Iced coffee · frappe',items:[...orderedIcedCoffee.map(item=>{item[6]='Iced Coffee';return item}),...tagged('Frappes','Frappe')]},
   {category:'Protein Shakes/Bars',slug:'protein-shakes-bars',tagline:'Protein shakes · protein bars',items:[...tagged('Protein Shakes','Protein Shakes'),...tagged('Protein Bars','Protein Bars')]},
   {category:'Smoothies',slug:'smoothies',tagline:'Fruit-forward · naturally energising',items:tagged('Smoothies','Smoothies')},
   {category:'Fresh Juices',slug:'fresh-juices',tagline:'Cold press · mocktails',items:[...tagged('Fresh Juices','Cold Press'),...tagged('Mocktails','Mocktails')]},
-  {category:'Refreshing Drinks',slug:'refreshing-drinks',tagline:'Iced teas · mojitos · refreshers',items:[...coldItems.filter(isRefreshing).map(item=>{item[6]='Refreshing Drinks';return item}),...coldItems.filter(isIcedTea).map(item=>{item[6]='Iced Teas';return item}),...coldItems.filter(isMojito).map(item=>{item[6]='Mojitos';return item})]},
+  {category:'Refreshing Drinks',slug:'refreshing-drinks',tagline:'Iced teas · mojitos · refreshers',items:[...coldItems.filter(isIcedTea).map(item=>{item[6]='Iced Teas';return item}),...coldItems.filter(isMojito).map(item=>{item[6]='Mojitos';return item}),...coldItems.filter(isRefreshing).map(item=>{item[6]='Refreshing Drinks';return item})]},
   {category:'Sandwiches',slug:'sandwiches',tagline:'Freshly made · full of flavour',items:tagged('Sandwiches','Sandwiches')}
 ];
 
@@ -109,7 +112,7 @@ const content=document.querySelector('.menu-content');
 const renderMenuCard=(item,categoryIndex,itemIndex)=>`<div class="menu-card"><div class="menu-img"><img src="${item[3]}" alt="${item[0]}" loading="lazy">${item[4]?`<span>${item[4]}</span>`:''}</div><div class="menu-card-info"><div class="product-summary"><h4>${item[0]}</h4><div class="product-controls"><button class="view-details" data-category-index="${categoryIndex}" data-item-index="${itemIndex}">Details <span aria-hidden="true">↗</span></button><button class="comment-product" data-product="${item[0]}"><span aria-hidden="true">💬</span> Comment</button></div></div><div class="menu-card-actions"><strong>AED ${item[2]}</strong><button class="add-cart" data-name="${item[0]}" data-price="${item[2]}" data-image="${item[3]}">Add +</button></div></div></div>`;
 content.innerHTML=menu.map((category,categoryIndex)=>{
   const columns=[...new Set(category.items.map(item=>item[6]))];
-  const columnMarkup=columns.map(column=>`<section class="menu-subsection"><header><span>${String(columns.indexOf(column)+1).padStart(2,'0')}</span><h4>${column}</h4></header><div class="menu-grid">${category.items.map((item,itemIndex)=>item[6]===column?renderMenuCard(item,categoryIndex,itemIndex):'').join('')}</div></section>`).join('');
+  const columnMarkup=columns.map(column=>`<section class="menu-subsection" data-column="${column}"><header><span>${String(columns.indexOf(column)+1).padStart(2,'0')}</span><h4>${column}</h4></header><div class="menu-grid">${category.items.map((item,itemIndex)=>item[6]===column?renderMenuCard(item,categoryIndex,itemIndex):'').join('')}</div></section>`).join('');
   return `<article class="menu-category" id="${category.slug}" data-category="${category.slug}"><header class="category-title"><div><p>${String(categoryIndex+1).padStart(2,'0')} · MENU</p><h3>${category.category}</h3></div><span>${category.tagline}</span></header><div class="menu-subsections">${columnMarkup}</div></article>`;
 }).join('');
 
