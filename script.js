@@ -1,6 +1,6 @@
 let menu = [
   {category:'Breakfast',slug:'breakfast',tagline:'Fresh mornings · made to nourish',items:[['Avacado Toast with Poached Eggs','Creamy avocado toast topped with poached eggs and served with a fresh garden salad',41,'assets/avacado-toast-poached-eggs-new.png',''],['Avacado Toast with Salmon','Creamy avocado toast topped with salmon and served with a fresh garden salad',49,'assets/avacado-toast-salmon-new.png',''],['Avacado Toasted Poached Egg','Avocado toast with a poached egg, served with a fresh garden salad',41,'assets/avacado-toasted-poached-egg.png','']]},
-  {category:'Hot Beverages',slug:'hot-beverages',tagline:'Warm cups · better moments',items:[['Americano','Espresso lengthened with hot water for a smooth, bold cup',19,'assets/hot-americano.webp',''],['Cappuccino/Cortado White','Espresso with silky steamed milk and a smooth foam finish',24,'assets/hot-cappuccino-flat-white.png',''],['Cappuccino/Macchiato','Espresso marked with silky milk and a smooth foam finish',24,'assets/hot-cappuccino-macchiato.png',''],['Cappuccino/Cortado','Espresso balanced with warm, lightly textured milk',24,'assets/hot-cappuccino-cortado.png',''],['Cappuccino/Flat White','Espresso with velvety steamed milk and a thin microfoam finish',24,'assets/hot-cappuccino-flat-white-new.png',''],['Expresso','A rich, full-bodied single shot',17,'assets/hot-expresso.webp',''],['Hot Matcha Latte','Matcha whisked with smooth steamed milk',26,'assets/hot-matcha-latte.webp','V'],['Mochaccino','Espresso, chocolate and silky steamed milk',25,'assets/hot-mochaccino.webp',''],['Piccolo','A short espresso softened with textured milk',24,'assets/hot-piccolo.webp',''],['Tea Selections','A curated selection of classic hot teas',18,'assets/hot-tea-selections.webp','V'],['Tisane Tea','A soothing caffeine-free herbal infusion',20,'assets/hot-tisane-tea.webp','VG'],['V60','Hand-poured filter coffee with a clean, aromatic finish',26,'assets/hot-v60.webp','']]},
+  {category:'Hot Beverages',slug:'hot-beverages',tagline:'Warm cups · better moments',items:[['Americano','Espresso lengthened with hot water for a smooth, bold cup',19,'assets/hot-americano.webp',''],['Cappuccino','Espresso with silky steamed milk and a smooth foam finish',24,'assets/hot-cappuccino-flat-white.png',''],['Latte','Espresso marked with silky milk and a smooth foam finish',24,'assets/hot-cappuccino-macchiato.png',''],['Spanish Latte','Espresso balanced with warm, lightly textured milk',24,'assets/hot-cappuccino-cortado.png',''],['Expresso','A rich, full-bodied single shot',17,'assets/hot-expresso.webp',''],['Hot Matcha Latte','Matcha whisked with smooth steamed milk',26,'assets/hot-matcha-latte.webp','V'],['Mochaccino','Espresso, chocolate and silky steamed milk',25,'assets/hot-mochaccino.webp',''],['Cortado','A short espresso softened with textured milk',24,'assets/hot-piccolo.webp',''],['Flat White','Velvety espresso with smooth steamed milk and a fine microfoam finish',24,'assets/hot-piccolo.webp',''],['Tea Selections','A curated selection of classic hot teas',18,'assets/hot-tea-selections.webp','V'],['Tisane Tea','A soothing caffeine-free herbal infusion',20,'assets/hot-tisane-tea.webp','VG'],['V60','Hand-poured filter coffee with a clean, aromatic finish',26,'assets/hot-v60.webp','']]},
   {category:'Salads',slug:'salads',tagline:'Fresh · crisp · satisfying',items:[['Blood Sugar Level','Chickpeas, avocado, cucumber, tomatoes, radish and olives',25,'assets/salad-blood-sugar-level.webp','VG'],['Chicken Ceasar','Grilled chicken, avocado, baby gem, parmesan and croutons',29,'assets/salad-chicken-ceasar.webp',''],['Colon Cleaning','Beetroot, carrot and cabbage in a bright citrus dressing',25,'assets/salad-colon-cleaning.webp','VG'],['Flat Stomach','Green peas, cucumber and red cabbage with fresh herbs',25,'assets/salad-flat-stomach.webp','VG'],['Tabbouloleh Salad','Couscous, cucumber, tomato, herbs and red onion',25,'assets/salad-tabbouloleh.webp','VG'],['Triple Berries Salad','Spinach, strawberries, blueberries, blackberries and feta',29,'assets/salad-triple-berries.webp','V']]},
   {category:'Sandwiches',slug:'sandwiches',tagline:'Freshly made · full of flavour',items:[['Beef Pastrami','Beef pastrami, melted cheese, lettuce and onion',38,'assets/sandwich-beef-pastrami.webp',''],['Chickado','Chicken, avocado, tomato, cucumber and creamy dressing',38,'assets/sandwich-chickado.webp',''],['Halloumi Avacado','Halloumi, avocado, cucumber and tomato',38,'assets/sandwich-halloumi-avacado.webp','V'],['Halloumi Pesto','Halloumi, pesto, cucumber and tomato',38,'assets/sandwich-halloumi-pesto.webp','V'],['Labneh','Labneh, cucumber, tomato, olives and greens',38,'assets/sandwich-labneh.webp','V'],['Melted Cheese','Warm melted cheese and tomato',38,'assets/sandwich-melted-cheese.webp','V'],['Smoked Salmon','Smoked salmon, cucumber and cream cheese',38,'assets/sandwich-smoked-salmon.webp',''],['Smoked Turkey','Smoked turkey, melted cheese, tomato and pesto',38,'assets/sandwich-smoked-turkey.webp','']]},
   {category:'Healthy Bowls',slug:'healthy-bowls',tagline:'Balanced fuel · bold flavour',items:[['Acai Bowl','Açaí topped with banana, berries, granola and peanut butter',46,'assets/bowl-acai.webp','VG'],['Blue Crash Bowl','A vibrant blue smoothie bowl with mango, banana, berries and granola',44,'assets/bowl-blue-crash.webp','VG'],['Mystic Matcha Bowl','A berry smoothie bowl with avocado, banana, cucumber and granola',44,'assets/bowl-original.webp','VG'],['Green Dream Bowl','A colourful wellness bowl with fruit, vegetables, nuts and granola',44,'assets/bowl-2.webp','VG'],['Detox Me Later Glow Bowl','A pink smoothie bowl topped with tropical fruit, berries and pomegranate',44,'assets/bowl-4.webp','VG'],['Tropical Glow Bowl','A tropical green bowl with avocado, mango, pineapple and berries',44,'assets/bowl-tropical-glow.webp','VG'],['Watermelon Feta','Fresh watermelon, feta, chia seeds and mint',25,'assets/bowl-watermelon-feta.webp','V']]},
@@ -109,7 +109,11 @@ const moveCategories=direction=>categories.scrollBy({left:direction*Math.max(180
 categoryPrev.addEventListener('click',()=>moveCategories(-1));categoryNext.addEventListener('click',()=>moveCategories(1));
 categories.addEventListener('scroll',updateCategoryArrows,{passive:true});addEventListener('resize',updateCategoryArrows,{passive:true});requestAnimationFrame(updateCategoryArrows);
 const content=document.querySelector('.menu-content');
-const renderMenuCard=(item,categoryIndex,itemIndex)=>`<div class="menu-card"><div class="menu-img"><img src="${item[3]}" alt="${item[0]}" loading="lazy">${item[4]?`<span>${item[4]}</span>`:''}</div><div class="menu-card-info"><div class="product-summary"><h4>${item[0]}</h4><div class="product-controls"><button class="view-details" data-category-index="${categoryIndex}" data-item-index="${itemIndex}">Details <span aria-hidden="true">↗</span></button><button class="comment-product" data-product="${item[0]}"><span aria-hidden="true">💬</span> Comment</button></div></div><div class="menu-card-actions"><strong>AED ${item[2]}</strong><button class="add-cart" data-name="${item[0]}" data-price="${item[2]}" data-image="${item[3]}">Add +</button></div></div></div>`;
+const renderMenuCard=(item,categoryIndex,itemIndex)=>{
+  const category=menu[categoryIndex],isCustomDrink=['hot-beverages','ice-beverages'].includes(category.slug);
+  const controls=isCustomDrink?`<button class="view-details" data-category-index="${categoryIndex}" data-item-index="${itemIndex}">Details <span aria-hidden="true">↗</span></button><button class="customize-product" data-product="${item[0]}"><span aria-hidden="true">⚙</span> Customize</button>`:`<button class="view-details" data-category-index="${categoryIndex}" data-item-index="${itemIndex}">Details <span aria-hidden="true">↗</span></button><button class="comment-product" data-product="${item[0]}"><span aria-hidden="true">💬</span> Comment</button>`;
+  return `<div class="menu-card${isCustomDrink?' customizable-card':''}" role="button" tabindex="0" aria-label="View details for ${item[0]}" data-category-index="${categoryIndex}" data-item-index="${itemIndex}"><div class="menu-img"><img src="${item[3]}" alt="${item[0]}" loading="lazy">${item[4]?`<span>${item[4]}</span>`:''}</div><div class="menu-card-info"><div class="product-summary"><h4>${item[0]}</h4><div class="product-controls">${controls}</div></div><div class="menu-card-actions"><strong>AED ${item[2]}</strong><button class="add-cart" data-name="${item[0]}" data-price="${item[2]}" data-image="${item[3]}">Add +</button></div></div></div>`;
+};
 content.innerHTML=menu.map((category,categoryIndex)=>{
   const columns=[...new Set(category.items.map(item=>item[6]))];
   const columnId=column=>`${category.slug}-${column.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`;
@@ -118,25 +122,43 @@ content.innerHTML=menu.map((category,categoryIndex)=>{
   return `<article class="menu-category" id="${category.slug}" data-category="${category.slug}"><header class="category-title"><div><p>${String(categoryIndex+1).padStart(2,'0')} · MENU</p><h3>${category.category}</h3></div><span>${category.tagline}</span></header>${subnav}<div class="menu-subsections">${columnMarkup}</div></article>`;
 }).join('');
 content.addEventListener('click',event=>{const button=event.target.closest('[data-subtarget]');if(!button)return;document.getElementById(button.dataset.subtarget)?.scrollIntoView({behavior:'smooth',block:'start'})});
+const mobileSubnavDock=document.createElement('nav');
+mobileSubnavDock.className='mobile-subnav-dock';
+mobileSubnavDock.setAttribute('aria-label','Current menu subsections');
+mobileSubnavDock.hidden=true;document.body.append(mobileSubnavDock);
+mobileSubnavDock.addEventListener('click',event=>{const button=event.target.closest('[data-subtarget]');if(!button)return;document.getElementById(button.dataset.subtarget)?.scrollIntoView({behavior:'smooth',block:'start'})});
 
 const productModal=document.createElement('dialog');
 productModal.className='product-details-modal';
 productModal.setAttribute('aria-labelledby','product-modal-title');
-productModal.innerHTML='<button class="product-modal-close" type="button" aria-label="Close product details">×</button><div class="product-modal-image"><img alt=""></div><div class="product-modal-copy"><p class="product-modal-eyebrow">MENU DETAILS</p><h2 id="product-modal-title"></h2><strong class="product-modal-price"></strong><div class="product-modal-section"><h3>Ingredients</h3><ul></ul></div><dl class="product-modal-facts"></dl></div>';
+productModal.innerHTML='<button class="product-modal-close" type="button" aria-label="Close product details">×</button><div class="product-modal-image"><img alt=""></div><div class="product-modal-copy"><p class="product-modal-eyebrow">PRESS’D MENU</p><div class="product-modal-heading"><h2 id="product-modal-title"></h2><strong class="product-modal-price"></strong></div><p class="product-modal-description"></p><div class="product-modal-section"><h3>What’s inside</h3><ul></ul></div><dl class="product-modal-facts"></dl><div class="product-modal-actions"></div></div>';
 document.body.append(productModal);
 const closeProductModal=()=>productModal.close();
 productModal.querySelector('.product-modal-close').addEventListener('click',closeProductModal);
 productModal.addEventListener('click',event=>{if(event.target===productModal)closeProductModal()});
 productModal.addEventListener('close',()=>document.body.classList.remove('product-modal-open'));
-document.addEventListener('click',event=>{
-  const button=event.target.closest('.view-details');if(!button)return;
-  const item=menu[Number(button.dataset.categoryIndex)].items[Number(button.dataset.itemIndex)],details=item[5];
+const openProductDetails=trigger=>{
+  const categoryIndex=Number(trigger.dataset.categoryIndex),category=menu[categoryIndex],item=category.items[Number(trigger.dataset.itemIndex)],details=item[5],isCustomDrink=['hot-beverages','ice-beverages'].includes(category.slug);
   productModal.querySelector('img').src=item[3];productModal.querySelector('img').alt=item[0];
   productModal.querySelector('h2').textContent=item[0];productModal.querySelector('.product-modal-price').textContent=`AED ${item[2]}`;
+  productModal.querySelector('.product-modal-description').textContent=item[1];
   productModal.querySelector('ul').innerHTML=details.ingredients.map(value=>`<li>${value}</li>`).join('');
   const facts=[['Size',details.size],['Protein',details.protein],['Carbohydrates',details.carbohydrates],['Calories',details.calories]].filter(([,value])=>value);
   productModal.querySelector('.product-modal-facts').innerHTML=facts.map(([label,value])=>`<div><dt>${label}</dt><dd>${value}</dd></div>`).join('');
+  productModal.querySelector('.product-modal-actions').innerHTML=`${isCustomDrink?`<button class="customize-product" data-product="${item[0]}"><span aria-hidden="true">⚙</span> Customize</button>`:`<button class="comment-product" data-product="${item[0]}"><span aria-hidden="true">💬</span> Comment</button>`}<button class="add-cart" data-name="${item[0]}" data-price="${item[2]}" data-image="${item[3]}">Add to Order +</button>`;
   document.body.classList.add('product-modal-open');productModal.showModal();
+};
+document.addEventListener('click',event=>{
+  const button=event.target.closest('.view-details');
+  if(button){openProductDetails(button);return}
+  const card=event.target.closest('.menu-card');
+  if(!card||event.target.closest('button,a,input,textarea,select,label'))return;
+  openProductDetails(card);
+});
+document.addEventListener('keydown',event=>{
+  const card=event.target.closest('.menu-card');
+  if(!card||event.target!==card||!['Enter',' '].includes(event.key))return;
+  event.preventDefault();openProductDetails(card);
 });
 
 const instructionsModal=document.createElement('dialog');
@@ -166,6 +188,41 @@ instructionsModal.querySelector('form').addEventListener('submit',event=>{
   instructionsModal.querySelector('.instructions-note').textContent='Instructions saved.';setTimeout(closeInstructions,700);
 });
 
+const customizeModal=document.createElement('dialog');
+customizeModal.className='customize-modal';
+customizeModal.setAttribute('aria-labelledby','customize-title');
+const milkOptions=['Full Fat','Low Fat','Oat Milk','Almond Milk','Coconut Milk','Lactose-Free Milk'];
+const addonOptions=['Maple Syrup','Vanilla Syrup','Caramel Syrup','Hazelnut Syrup','Sugar Syrup','Honey','Raspberry Syrup','Blueberry Syrup','Strawberry Syrup','Peach Syrup','Passion Fruit Syrup'];
+customizeModal.innerHTML=`<button class="customize-close" type="button" aria-label="Close drink customization">×</button><p class="customize-eyebrow">MAKE IT YOURS</p><h2 id="customize-title">Customize Your Drink</h2><p class="customize-product-name"></p><form><fieldset><legend>Coffee</legend><div class="customize-options compact"><label><input type="radio" name="coffee" value="Caffeinated" checked><span>Caffeinated</span></label><label><input type="radio" name="coffee" value="Decaf"><span>Decaf</span></label></div></fieldset><fieldset><legend>Milk</legend><div class="customize-options">${milkOptions.map((option,index)=>`<label><input type="radio" name="milk" value="${option}"${index===0?' checked':''}><span>${option}</span></label>`).join('')}</div></fieldset><fieldset><legend>Add-ons</legend><div class="customize-options addons">${addonOptions.map(option=>`<label><input type="checkbox" name="addons" value="${option}"><span>${option}</span></label>`).join('')}</div></fieldset><fieldset class="customize-comment"><legend>Comment / Special Instructions</legend><label for="customize-instructions">Tell us what you’d like to reduce, remove, or add to this drink.</label><textarea id="customize-instructions" name="instructions" maxlength="500" rows="4" placeholder="Add your comment or special instructions…"></textarea></fieldset><p class="customize-note" aria-live="polite"></p><button class="customize-save" type="submit">Save Selection</button></form>`;
+document.body.append(customizeModal);
+let customizeProduct='';
+const readCustomizations=()=>{try{return JSON.parse(localStorage.getItem('pressd-customizations')||'{}')}catch{return {}}};
+const customizationText=customization=>customization?`Coffee: ${customization.coffee}; Milk: ${customization.milk}; Add-ons: ${customization.addons?.length?customization.addons.join(', '):'None'}`:'';
+document.addEventListener('click',event=>{
+  const button=event.target.closest('.customize-product');if(!button)return;
+  customizeProduct=button.dataset.product;
+  const saved=readCustomizations()[customizeProduct]||{coffee:'Caffeinated',milk:'Full Fat',addons:[]};
+  customizeModal.querySelector('.customize-product-name').textContent=customizeProduct;
+  customizeModal.querySelectorAll('input[name="coffee"]').forEach(input=>input.checked=input.value===saved.coffee);
+  customizeModal.querySelectorAll('input[name="milk"]').forEach(input=>input.checked=input.value===saved.milk);
+  customizeModal.querySelectorAll('input[name="addons"]').forEach(input=>input.checked=(saved.addons||[]).includes(input.value));
+  customizeModal.querySelector('textarea[name="instructions"]').value=readInstructions()[customizeProduct]||'';
+  customizeModal.querySelector('.customize-note').textContent='';customizeModal.showModal();
+});
+const closeCustomize=()=>customizeModal.close();
+customizeModal.querySelector('.customize-close').addEventListener('click',closeCustomize);
+customizeModal.addEventListener('click',event=>{if(event.target===customizeModal)closeCustomize()});
+customizeModal.querySelector('form').addEventListener('submit',event=>{
+  event.preventDefault();
+  const form=new FormData(event.currentTarget),saved=readCustomizations();
+  const customization={coffee:form.get('coffee'),milk:form.get('milk'),addons:form.getAll('addons')},instructions=String(form.get('instructions')||'').trim();
+  saved[customizeProduct]=customization;localStorage.setItem('pressd-customizations',JSON.stringify(saved));
+  const savedInstructions=readInstructions();if(instructions)savedInstructions[customizeProduct]=instructions;else delete savedInstructions[customizeProduct];localStorage.setItem('pressd-instructions',JSON.stringify(savedInstructions));
+  const cartItem=cart?.find(item=>item.name===customizeProduct);
+  if(cartItem){cartItem.customization=customization;cartItem.instructions=instructions;renderCart()}
+  customizeModal.querySelector('.customize-note').textContent='Your drink customization is saved.';setTimeout(closeCustomize,650);
+});
+
 const nav=document.querySelector('.navbar'), toggle=document.querySelector('.menu-toggle'), mobile=document.querySelector('.mobile-menu');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
 toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',!open);mobile.classList.toggle('open',!open);mobile.setAttribute('aria-hidden',open);document.body.classList.toggle('menu-open',!open)});
@@ -173,7 +230,10 @@ mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle.cl
 
 categories.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;categories.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.filter==='all'?menu[0].slug:b.dataset.filter).scrollIntoView({behavior:'smooth',block:'start'});});
 const menuSections=[...document.querySelectorAll('.menu-category')];
-const menuObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){categories.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.filter===e.target.dataset.category));const active=categories.querySelector('.active');active?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});setTimeout(updateCategoryArrows,350);}}),{rootMargin:'-30% 0px -55%',threshold:0});
+menuSections[0]?.classList.add('active-menu-category');
+const updateMobileSubnav=section=>{const source=section?.querySelector('.menu-subnav');mobileSubnavDock.innerHTML=source?.innerHTML||'';mobileSubnavDock.hidden=!source};
+updateMobileSubnav(menuSections[0]);
+const menuObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){menuSections.forEach(section=>section.classList.toggle('active-menu-category',section===e.target));updateMobileSubnav(e.target);categories.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.filter===e.target.dataset.category));const active=categories.querySelector('.active');active?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});setTimeout(updateCategoryArrows,350);}}),{rootMargin:'-30% 0px -55%',threshold:0});
 menuSections.forEach(x=>menuObserver.observe(x));
 
 const revealObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}}),{threshold:.13});
@@ -201,7 +261,15 @@ const restoreCategoryBar=()=>{
 };
 const syncCategoryPin=()=>{
   categoryPinFrame=0;
-  const shouldPin=categoryPinMedia.matches&&document.body.classList.contains('detail-view')&&scrollY>=categoryPinStart;
+  if(categoryPinMedia.matches&&document.body.classList.contains('menu-detail-view')){
+    if(!categoryWrap.classList.contains('is-pinned')){
+      categoryPinHeight=categoryWrap.offsetHeight;
+      categoryPinSpacer.style.height=`${categoryPinHeight}px`;
+      document.body.append(categoryWrap);categoryWrap.classList.add('is-pinned');requestAnimationFrame(updateCategoryArrows);
+    }
+    return;
+  }
+  const shouldPin=categoryPinMedia.matches&&document.body.classList.contains('detail-view')&&!document.body.classList.contains('menu-detail-view')&&scrollY>=categoryPinStart;
   if(shouldPin&&!categoryWrap.classList.contains('is-pinned')){
     categoryPinSpacer.style.height=`${categoryPinHeight}px`;
     document.body.append(categoryWrap);
@@ -216,6 +284,7 @@ const measureCategoryPin=()=>{
   restoreCategoryBar();
   categoryPinStart=Infinity;
   if(!categoryPinMedia.matches||!document.body.classList.contains('detail-view'))return;
+  if(document.body.classList.contains('menu-detail-view')){requestCategoryPinSync();return}
   const style=getComputedStyle(categoryWrap);
   categoryPinHeight=categoryWrap.offsetHeight+parseFloat(style.marginTop||0)+parseFloat(style.marginBottom||0);
   categoryPinStart=categoryWrap.getBoundingClientRect().top+scrollY-categoryPinTop();
@@ -457,9 +526,9 @@ const closeCart=()=>{cartDrawer.classList.remove('open');cartBackdrop.classList.
 const renderCart=()=>{
   const quantity=cart.reduce((sum,item)=>sum+item.qty,0),total=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
   cartCount.textContent=quantity;dockCartCount.textContent=quantity;cartHeadingCount.textContent=quantity;cartTotal.textContent=`AED ${total}`;cartEmpty.hidden=cart.length>0;cartItems.hidden=!cart.length;
-  cartItems.innerHTML=cart.map((item,index)=>`<article class="cart-item"><img class="cart-item-image" src="${cartImageFor(item)}" alt="${escapeCartText(item.name)}"><div class="cart-item-copy"><h3>${escapeCartText(item.name)}</h3><p>AED ${item.price}</p>${item.instructions?`<p class="cart-item-instructions"><b>Special instructions:</b> ${escapeCartText(item.instructions)}</p>`:''}</div><div class="cart-quantity"><button data-cart-action="minus" data-index="${index}" aria-label="Remove one ${escapeCartText(item.name)}">−</button><span>${item.qty}</span><button data-cart-action="plus" data-index="${index}" aria-label="Add one ${escapeCartText(item.name)}">+</button></div></article>`).join('');
-  if(cart.length){const lines=cart.map(item=>`• ${item.name} x${item.qty} — AED ${item.price*item.qty}\n  Details: ${cartDetailsFor(item)}${item.instructions?`\n  Special instructions: ${item.instructions}`:''}\n  Image: ${publicImageUrl(item)}`);const message=`Hello PRESS'D! I'd like to order:\n\n${lines.join('\n\n')}\n\nTotal: AED ${total}\n\nPlease confirm availability and delivery/pickup details.`;whatsappOrder.href=`https://wa.me/971504363386?text=${encodeURIComponent(message)}`;whatsappOrder.classList.remove('disabled');whatsappOrder.setAttribute('aria-disabled','false')}else{whatsappOrder.href='#';whatsappOrder.classList.add('disabled');whatsappOrder.setAttribute('aria-disabled','true')}
+  cartItems.innerHTML=cart.map((item,index)=>`<article class="cart-item"><img class="cart-item-image" src="${cartImageFor(item)}" alt="${escapeCartText(item.name)}"><div class="cart-item-copy"><h3>${escapeCartText(item.name)}</h3><p>AED ${item.price}</p>${item.customization?`<p class="cart-item-customization"><b>Customized:</b> ${escapeCartText(customizationText(item.customization))}</p>`:''}${item.instructions?`<p class="cart-item-instructions"><b>Special instructions:</b> ${escapeCartText(item.instructions)}</p>`:''}</div><div class="cart-quantity"><button data-cart-action="minus" data-index="${index}" aria-label="Remove one ${escapeCartText(item.name)}">−</button><span>${item.qty}</span><button data-cart-action="plus" data-index="${index}" aria-label="Add one ${escapeCartText(item.name)}">+</button></div></article>`).join('');
+  if(cart.length){const lines=cart.map(item=>`• ${item.name} x${item.qty} — AED ${item.price*item.qty}\n  Details: ${cartDetailsFor(item)}${item.customization?`\n  Customized: ${customizationText(item.customization)}`:''}${item.instructions?`\n  Special instructions: ${item.instructions}`:''}\n  Image: ${publicImageUrl(item)}`);const message=`Hello PRESS'D! I'd like to order:\n\n${lines.join('\n\n')}\n\nTotal: AED ${total}\n\nPlease confirm availability and delivery/pickup details.`;whatsappOrder.href=`https://wa.me/971504363386?text=${encodeURIComponent(message)}`;whatsappOrder.classList.remove('disabled');whatsappOrder.setAttribute('aria-disabled','false')}else{whatsappOrder.href='#';whatsappOrder.classList.add('disabled');whatsappOrder.setAttribute('aria-disabled','true')}
   saveCart();
 };
-document.addEventListener('click',event=>{const add=event.target.closest('.add-cart');if(add){const name=add.dataset.name,price=Number(add.dataset.price),image=add.dataset.image,instructions=readInstructions()[name]||'',existing=cart.find(item=>item.name===name);if(existing){existing.qty++;existing.image=image||existing.image;existing.instructions=instructions}else cart.push({name,price,image,instructions,qty:1});renderCart();animateCartAdd(add,name);add.textContent='Added ✓';setTimeout(()=>{add.textContent='Add +';add.classList.remove('is-added')},1200)}const control=event.target.closest('[data-cart-action]');if(control){const index=Number(control.dataset.index);if(control.dataset.cartAction==='plus')cart[index].qty++;else cart[index].qty--;cart=cart.filter(item=>item.qty>0);renderCart()}});
+document.addEventListener('click',event=>{const add=event.target.closest('.add-cart');if(add){const name=add.dataset.name,price=Number(add.dataset.price),image=add.dataset.image,instructions=readInstructions()[name]||'',customization=readCustomizations()[name],existing=cart.find(item=>item.name===name);if(existing){existing.qty++;existing.image=image||existing.image;existing.instructions=instructions;existing.customization=customization}else cart.push({name,price,image,instructions,customization,qty:1});renderCart();animateCartAdd(add,name);add.textContent='Added ✓';setTimeout(()=>{add.textContent='Add +';add.classList.remove('is-added')},1200)}const control=event.target.closest('[data-cart-action]');if(control){const index=Number(control.dataset.index);if(control.dataset.cartAction==='plus')cart[index].qty++;else cart[index].qty--;cart=cart.filter(item=>item.qty>0);renderCart()}});
 cartToggle.addEventListener('click',openCart);dockCart.addEventListener('click',openCart);cartClose.addEventListener('click',closeCart);cartBackdrop.addEventListener('click',closeCart);document.addEventListener('keydown',event=>{if(event.key==='Escape'&&cartDrawer.classList.contains('open'))closeCart()});whatsappOrder.addEventListener('click',event=>{if(!cart.length)event.preventDefault()});renderCart();
