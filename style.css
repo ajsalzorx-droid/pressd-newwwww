@@ -1230,3 +1230,28 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
   body.detail-view .menu-section .menu-subsection .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
   .menu-section .menu-intro,.menu-section .menu-content{max-width:960px!important;padding-inline:22px!important}
 }
+
+/* Mobile-only Customize Your Drink layout */
+@media(max-width:639px){
+  .customize-modal{box-sizing:border-box;width:calc(100% - 24px)!important;max-width:430px!important;height:auto!important;max-height:calc(100dvh - 24px)!important;margin:12px auto!important;padding:24px 18px 18px!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain;border-radius:22px!important}
+  .customize-modal .modal-header{box-sizing:border-box;margin:0 0 22px!important;padding-right:44px;text-align:left}
+  .customize-modal .modal-header .eyebrow{margin:0 0 9px!important;text-align:left}
+  .customize-modal .modal-header h2{max-width:none!important;margin:0!important;font-size:clamp(38px,12vw,52px)!important;line-height:.92!important;text-align:left}
+  .customize-modal .modal-header h3{margin:10px 0 0!important;font-size:15px;text-align:left}
+  .customize-modal .close-btn{position:absolute!important;z-index:3;top:15px!important;right:15px!important;width:38px!important;height:38px!important}
+  .customize-modal form{display:block!important;width:100%;height:auto!important;min-height:0!important}
+  .customize-modal .customize-grid{display:block!important;width:100%}
+  .customize-modal .custom-section{display:block!important;width:100%;margin:0 0 22px!important;text-align:left;overflow:visible!important}
+  .customize-modal .custom-section h4{width:100%;margin:0 0 9px!important;padding:0 0 7px!important;text-align:left;font-size:9px!important;line-height:1.2;letter-spacing:.15em}
+  .customize-modal .option-grid,.customize-modal .coffee-options,.customize-modal .milk-options,.customize-modal .addon-options{display:flex!important;width:100%;max-width:100%;grid-template-columns:none!important;flex-wrap:nowrap!important;gap:8px!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;padding:1px 0 4px}
+  .customize-modal .option-grid::-webkit-scrollbar,.customize-modal .coffee-options::-webkit-scrollbar,.customize-modal .milk-options::-webkit-scrollbar,.customize-modal .addon-options::-webkit-scrollbar{display:none}
+  .customize-modal .option-card{box-sizing:border-box;display:inline-flex!important;flex:0 0 auto!important;width:auto!important;min-width:max-content!important;min-height:42px!important;align-items:center!important;padding:10px 14px!important;white-space:nowrap!important}
+  .customize-modal .option-card input{flex:0 0 auto!important;width:16px!important;height:16px!important;margin:0 8px 0 0!important}
+  .customize-modal .option-card span{display:inline-block;min-width:max-content!important;white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important;font-size:11px!important;line-height:1!important}
+  .customize-modal .coffee-options{overflow-x:hidden!important}
+  .customize-modal .coffee-options .option-card{flex:1 1 0!important;min-width:0!important;justify-content:flex-start}
+  .customize-modal .comment-section{width:100%!important;margin-bottom:22px!important}
+  .customize-modal .comment-section>p{margin:0 0 10px!important;font-size:11px!important;line-height:1.45;text-align:left}
+  .customize-modal .comment-section textarea{box-sizing:border-box;width:100%!important;min-height:110px!important;height:110px!important;padding:12px 13px!important;font-size:13px!important}
+  .customize-modal .save-btn{display:block;width:100%!important;min-height:46px!important;margin:0!important;padding:12px 16px!important}
+}
