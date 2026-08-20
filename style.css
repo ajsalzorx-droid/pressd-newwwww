@@ -1306,3 +1306,57 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
   .customize-modal .coffee-options{overflow-x:auto!important}
   .customize-modal .coffee-options .option-card{flex:0 0 auto!important;width:auto!important;min-width:max-content!important}
 }
+
+/* Final tablet and mobile presentation polish */
+@media(min-width:640px) and (max-width:1100px){
+  body.detail-view.menu-detail-view .navbar{left:16px!important;right:16px!important}
+  body.detail-view.menu-detail-view .menu-section .category-wrap{width:calc(100% - 32px);margin-top:36px}
+  .menu-section .menu-intro,.menu-section .menu-content{max-width:940px!important;padding-inline:20px!important}
+  .menu-section .menu-category{padding-top:82px}
+  .menu-section .menu-subsection .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
+  .menu-section .menu-subsection .menu-card-info{min-height:154px;padding:18px}
+  .menu-subsection .product-summary h4{font-size:clamp(19px,2.5vw,23px)}
+  .menu-subsection .menu-card-actions{min-width:82px}
+  .menu-subsection .view-details,.menu-subsection .comment-product,.menu-subsection .customize-product{min-height:41px}
+  .customize-modal{width:calc(100% - 32px);padding:30px 26px 26px}
+  .customize-modal .customize-grid{gap:24px 18px}
+}
+
+@media(max-width:639px){
+  body.detail-view.menu-detail-view .navbar{top:8px!important;left:8px!important;right:8px!important;height:62px!important;padding-inline:13px!important;border-radius:15px}
+  .navbar .logo{max-width:112px}
+  .navbar .cart-toggle{min-width:58px;height:42px;padding-inline:10px}
+  .menu-section .menu-intro,.menu-section .menu-content{padding-inline:12px!important}
+  .menu-section .menu-category{padding-top:68px}
+  .menu-section .category-title{margin-bottom:24px}
+  .menu-section .category-title h3{font-size:clamp(38px,12vw,52px);line-height:.9}
+  .menu-section .category-title>span{max-width:34ch;font-size:13px;line-height:1.45}
+  .menu-section .menu-subsection+.menu-subsection{margin-top:44px}
+  .menu-section .menu-subsection>header{margin-bottom:13px}
+  .menu-section .menu-subsection .menu-grid{grid-template-columns:minmax(0,430px)!important;justify-content:center;gap:16px!important}
+  .menu-section .menu-subsection .menu-card{border-radius:20px}
+  .menu-section .menu-subsection .menu-img{aspect-ratio:16/11!important}
+  .menu-section .menu-subsection .menu-card-info{min-height:138px;padding:16px;gap:12px}
+  .menu-subsection .product-summary h4{font-size:20px;line-height:1.08}
+  .menu-subsection .menu-card-actions{min-width:80px}
+  .menu-subsection .view-details,.menu-subsection .comment-product,.menu-subsection .customize-product{min-height:42px!important}
+  .menu-subsection .add-cart{min-width:80px;min-height:43px}
+  body.menu-detail-view>.category-wrap.is-pinned{top:76px!important;left:8px!important;right:8px!important}
+  body.menu-detail-view .mobile-subnav-dock:not([hidden]){top:139px!important;left:8px!important;right:8px!important}
+  .customize-modal{width:calc(100% - 16px)!important;max-height:calc(100dvh - 16px)!important;margin:8px auto!important;padding:22px 16px 16px!important;border-radius:22px!important}
+  .customize-modal .modal-header{margin-bottom:20px!important;padding-right:42px}
+  .customize-modal .modal-header h2{font-size:clamp(34px,10.5vw,46px)!important;line-height:.94!important}
+  .customize-modal .custom-section,.customize-modal .bottom-options .custom-section{margin-bottom:20px!important}
+  .customize-modal .option-grid{scroll-padding-inline:2px}
+  .customize-modal .save-btn{position:sticky;bottom:0;z-index:2;box-shadow:0 -8px 20px rgba(247,241,230,.86)}
+  .product-details-modal{width:calc(100% - 16px)!important;max-height:calc(100dvh - 16px)!important;border-radius:22px!important}
+  .product-details-modal .product-modal-actions{display:grid;grid-template-columns:1fr 1.35fr;gap:9px}
+  .product-details-modal .product-modal-actions>*{width:100%;min-width:0}
+}
+
+@media(max-width:380px){
+  .menu-section .menu-subsection .menu-card-info{grid-template-columns:minmax(0,1fr) 74px;padding:14px 12px}
+  .menu-subsection .product-summary h4{font-size:18px}
+  .menu-subsection .menu-card-actions,.menu-subsection .add-cart{min-width:74px}
+  .customize-modal{padding-inline:13px!important}
+}
