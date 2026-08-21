@@ -1354,6 +1354,10 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
   .customize-modal{padding-inline:13px!important}
 }
 
+/* Keep the subsection row synchronized with the column currently in view. */
+body.menu-detail-view .menu-subnav button:first-child,.mobile-subnav-dock button:first-child{background:transparent;color:var(--cream)}
+body.menu-detail-view .menu-subnav button.active,.mobile-subnav-dock button.active{background:rgba(251,176,25,.18);color:var(--orange)}
+
 /* Final uniform product-card framing and alignment */
 .menu-section .menu-subsection .menu-grid{align-items:stretch!important;grid-auto-rows:1fr!important}
 .menu-section .menu-subsection .menu-card{display:grid!important;grid-template-rows:auto minmax(158px,1fr)!important;height:100%!important;min-height:0!important;align-self:stretch;overflow:hidden}
