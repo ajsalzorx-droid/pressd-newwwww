@@ -1392,3 +1392,506 @@ body.menu-detail-view .menu-subnav button.active,.mobile-subnav-dock button.acti
   .menu-section .menu-subsection .add-cart{min-width:72px!important;padding-inline:6px!important}
   .menu-section .menu-subsection .view-details,.menu-section .menu-subsection .comment-product,.menu-section .menu-subsection .customize-product{padding-inline:4px!important;font-size:6.5px!important}
 }
+
+/* Final mobile alignment: remove hidden hero space and keep menu content inside the viewport. */
+@media(max-width:639px){
+  html,body{max-width:100%;overflow-x:hidden}
+  body.detail-view .hero{display:none!important}
+  body.detail-view main{padding-inline:0!important}
+  body.menu-detail-view main>.menu-section.active-detail{
+    box-sizing:border-box;
+    width:calc(100% - 12px);
+    margin:0 6px!important;
+    padding:210px 0 92px!important;
+    opacity:1!important;
+    translate:none!important;
+    scale:1!important;
+    filter:none!important;
+  }
+  body.menu-detail-view .menu-section .menu-intro,
+  body.menu-detail-view .menu-section .menu-content{width:100%;padding-inline:10px!important}
+  body.menu-detail-view .menu-section .menu-intro h2{font-size:clamp(48px,14vw,62px);line-height:.88}
+  body.menu-detail-view .menu-section .menu-intro>p:last-child{max-width:31ch;margin-top:18px;font-size:12px;line-height:1.55}
+  body.menu-detail-view .menu-section .menu-category{padding-top:54px}
+  body.menu-detail-view .menu-section .menu-subsection .menu-grid{width:100%;max-width:430px;margin-inline:auto}
+  body.menu-detail-view .menu-section .menu-subsection .menu-card,
+  body.menu-detail-view .menu-section .menu-subsection .menu-card-info{min-width:0;max-width:100%}
+}
+
+@media(max-width:380px){
+  body.menu-detail-view main>.menu-section.active-detail{width:calc(100% - 8px);margin-inline:4px!important;padding-top:204px!important}
+  body.menu-detail-view .menu-section .menu-intro,
+  body.menu-detail-view .menu-section .menu-content{padding-inline:8px!important}
+}
+/* Protein shake: milk and special-instructions customization */
+.customize-modal.milk-only-mode {
+  width: min(760px, calc(100% - 28px));
+}
+
+.customize-modal.milk-only-mode .customize-grid {
+  display: block !important;
+}
+
+.customize-modal.milk-only-mode .milk-section,
+.customize-modal.milk-only-mode .comment-section {
+  display: block !important;
+  width: 100%;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.customize-modal.milk-only-mode .milk-section-title,
+.customize-modal.milk-only-mode .comment-section-title {
+  margin: 0 !important;
+  padding: 0 0 9px !important;
+  border-bottom: 1px solid #d6d0c6 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  line-height: 1 !important;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.customize-modal.milk-only-mode .milk-options {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+  margin-top: 10px;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.customize-modal.milk-only-mode .milk-option {
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  min-width: 0 !important;
+  width: 100% !important;
+  min-height: 64px !important;
+  padding: 11px 12px !important;
+  border: 1px solid #d5d0c7;
+  border-radius: 14px;
+  background: #fbf8f2;
+  cursor: pointer;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+
+.customize-modal.milk-only-mode .milk-option:has(.milk-radio:checked) {
+  border-color: #c77900;
+  background: #f9e7c1;
+  box-shadow: none;
+}
+
+.customize-modal.milk-only-mode .milk-option-content {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+}
+
+.customize-modal.milk-only-mode .milk-radio {
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px !important;
+  margin: 0 !important;
+  accent-color: #c77900;
+}
+
+.customize-modal.milk-only-mode .milk-option-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.customize-modal.milk-only-mode .milk-name {
+  min-width: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  color: #151515;
+  white-space: normal !important;
+}
+
+.customize-modal.milk-only-mode .milk-price {
+  flex-shrink: 0;
+  margin: 0 !important;
+  white-space: nowrap;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  color: #a86400;
+}
+
+.customize-modal.milk-only-mode .comment-section {
+  margin-top: 108px !important;
+}
+
+.customize-modal.milk-only-mode .comment-description {
+  margin: 9px 0 10px !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  color: #454545;
+}
+
+.customize-modal.milk-only-mode .comment-textarea {
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 180px !important;
+  min-height: 180px !important;
+  padding: 14px !important;
+  border: 1px solid #ccc7bf !important;
+  border-radius: 14px !important;
+  background: #fbf9f5 !important;
+  color: #111;
+  font-family: inherit !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  resize: none !important;
+  outline: none;
+}
+
+.customize-modal.milk-only-mode .comment-textarea::placeholder {
+  color: #888;
+}
+
+.customize-modal.milk-only-mode .comment-textarea:focus {
+  border-color: #b77916 !important;
+}
+
+@media (max-width: 600px) {
+  .customize-modal.milk-only-mode .milk-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-option {
+    min-height: 64px !important;
+    padding: 11px 10px !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-name {
+    font-size: 11px !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-price {
+    font-size: 9px !important;
+  }
+
+  .customize-modal.milk-only-mode .comment-section {
+    margin-top: 70px !important;
+  }
+
+  .customize-modal.milk-only-mode .comment-textarea {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .customize-modal.milk-only-mode .milk-options {
+    grid-template-columns: 1fr !important;
+  }
+
+  .customize-modal.milk-only-mode .comment-section {
+    margin-top: 45px !important;
+  }
+}
+
+/* Customize Drink: compact one-column mobile layout */
+@media (max-width: 768px) {
+  .customize-modal {
+    box-sizing: border-box;
+    width: calc(100% - 20px) !important;
+    max-width: 560px !important;
+    height: auto !important;
+    max-height: 94dvh !important;
+    margin: auto !important;
+    padding: 28px 18px 18px !important;
+    border-radius: 26px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .customize-modal .customize-header {
+    position: relative;
+    margin: 0 0 30px !important;
+    padding-right: 52px !important;
+  }
+
+  .customize-modal .customize-eyebrow {
+    margin: 0 0 9px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+  }
+
+  .customize-modal .customize-header h2 {
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: clamp(32px, 9vw, 46px) !important;
+    line-height: .95 !important;
+    letter-spacing: -2px !important;
+    font-weight: 800 !important;
+  }
+
+  .customize-modal .customize-product-name {
+    margin: 10px 0 0 !important;
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+  }
+
+  .customize-modal .customize-close {
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+    width: 46px !important;
+    height: 46px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .customize-modal form {
+    display: block !important;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .customize-modal .customize-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    width: 100%;
+  }
+
+  .customize-modal .coffee-section,
+  .customize-modal .milk-section,
+  .customize-modal .add-on-section,
+  .customize-modal .comment-section,
+  .customize-modal.milk-only-mode .milk-section,
+  .customize-modal.milk-only-mode .comment-section {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .customize-modal .coffee-section { order: 1; }
+  .customize-modal .milk-section { order: 2; }
+  .customize-modal .add-on-section { order: 3; }
+  .customize-modal .comment-section { order: 4; }
+
+  .customize-modal .custom-section h4,
+  .customize-modal.milk-only-mode .milk-section-title,
+  .customize-modal.milk-only-mode .comment-section-title {
+    width: 100%;
+    margin: 0 0 10px !important;
+    padding: 0 0 9px !important;
+    border-bottom: 1px solid #d6d0c6 !important;
+    color: #111;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase;
+  }
+
+  .customize-modal .option-grid,
+  .customize-modal .coffee-options,
+  .customize-modal .milk-options,
+  .customize-modal .addon-options,
+  .customize-modal.milk-only-mode .milk-options {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .customize-modal .option-card,
+  .customize-modal.milk-only-mode .milk-option {
+    box-sizing: border-box;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 62px !important;
+    padding: 11px 12px !important;
+    border-radius: 13px !important;
+    white-space: normal !important;
+  }
+
+  .customize-modal .option-card > input {
+    width: 18px !important;
+    height: 18px !important;
+    flex: 0 0 18px !important;
+    margin: 0 9px 0 0 !important;
+  }
+
+  .customize-modal .option-card > span:not(.milk-option-content) {
+    min-width: 0 !important;
+    flex: 1;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    font-size: 12px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+  }
+
+  .customize-modal .option-card > b {
+    flex: 0 0 auto;
+    margin-left: 8px !important;
+    white-space: nowrap;
+    font-size: 9px !important;
+    line-height: 1 !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-option-content,
+  .customize-modal.milk-only-mode .milk-option-info {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-option-content {
+    gap: 9px !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-option-info {
+    flex: 1;
+    justify-content: space-between;
+    gap: 8px !important;
+  }
+
+  .customize-modal.milk-only-mode .milk-name {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .customize-modal .comment-description,
+  .customize-modal .comment-section > p {
+    margin: 9px 0 10px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  .customize-modal .comment-textarea,
+  .customize-modal .comment-section textarea,
+  .customize-modal.milk-only-mode .comment-textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100% !important;
+    height: 135px !important;
+    min-height: 135px !important;
+    padding: 14px !important;
+    border-radius: 14px !important;
+    font-family: inherit !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    resize: none !important;
+  }
+
+  .customize-modal .customize-save {
+    position: static !important;
+    display: block;
+    width: 100% !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    margin: 28px 0 0 !important;
+    border-radius: 999px;
+    box-shadow: none !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: .3px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .customize-modal {
+    width: calc(100% - 14px) !important;
+    padding: 24px 14px 14px !important;
+    border-radius: 22px !important;
+  }
+
+  .customize-modal .customize-header {
+    margin-bottom: 26px !important;
+  }
+
+  .customize-modal .customize-header h2 {
+    font-size: clamp(30px, 10vw, 38px) !important;
+    letter-spacing: -1.7px !important;
+  }
+
+  .customize-modal .customize-product-name {
+    font-size: 16px !important;
+  }
+
+  .customize-modal .customize-grid {
+    gap: 25px !important;
+  }
+
+  .customize-modal .option-grid,
+  .customize-modal .coffee-options,
+  .customize-modal .milk-options,
+  .customize-modal .addon-options,
+  .customize-modal.milk-only-mode .milk-options {
+    gap: 7px !important;
+  }
+
+  .customize-modal .option-card,
+  .customize-modal.milk-only-mode .milk-option {
+    min-height: 58px !important;
+    padding: 10px !important;
+  }
+
+  .customize-modal .option-card > span:not(.milk-option-content),
+  .customize-modal.milk-only-mode .milk-name {
+    font-size: 11px !important;
+  }
+
+  .customize-modal .option-card > b,
+  .customize-modal.milk-only-mode .milk-price {
+    font-size: 8px !important;
+  }
+
+  .customize-modal .comment-textarea,
+  .customize-modal .comment-section textarea,
+  .customize-modal.milk-only-mode .comment-textarea {
+    height: 120px !important;
+    min-height: 120px !important;
+  }
+
+  .customize-modal .customize-save {
+    height: 56px !important;
+    min-height: 56px !important;
+    margin-top: 25px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .customize-modal .option-grid,
+  .customize-modal .coffee-options,
+  .customize-modal .milk-options,
+  .customize-modal .addon-options,
+  .customize-modal.milk-only-mode .milk-options {
+    grid-template-columns: 1fr !important;
+  }
+
+  .customize-modal .customize-header h2 {
+    font-size: 29px !important;
+  }
+}
