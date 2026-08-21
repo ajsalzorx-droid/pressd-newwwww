@@ -148,7 +148,7 @@ const openProductDetails=trigger=>{
   const facts=[['Size',details.size],['Protein',details.protein],['Carbohydrates',details.carbohydrates],['Calories',details.calories]].filter(([,value])=>value);
   productModal.querySelector('.product-modal-facts').innerHTML=facts.map(([label,value])=>`<div><dt>${label}</dt><dd>${value}</dd></div>`).join('');
   productModal.querySelector('.product-modal-actions').innerHTML=`${customizeMode?`<button class="customize-product" data-product="${item[0]}" data-customize-mode="${customizeMode}"><span aria-hidden="true">⚙</span> Customize</button>`:`<button class="comment-product" data-product="${item[0]}"><span aria-hidden="true">💬</span> Comment</button>`}<button class="add-cart" data-name="${item[0]}" data-price="${item[2]}" data-image="${item[3]}">Add to Order +</button>`;
-  document.body.classList.add('product-modal-open','modal-open');productModal.showModal();
+  document.body.classList.add('product-modal-open');productModal.showModal();
 };
 document.addEventListener('click',event=>{
   const button=event.target.closest('.view-details');
@@ -175,7 +175,7 @@ document.addEventListener('click',event=>{
   instructionsProduct=button.dataset.product;
   instructionsModal.querySelector('.instructions-product').textContent=instructionsProduct;
   instructionsModal.querySelector('textarea').value=readInstructions()[instructionsProduct]||'';
-  instructionsModal.querySelector('.instructions-note').textContent='';document.body.classList.add('modal-open');instructionsModal.showModal();
+  instructionsModal.querySelector('.instructions-note').textContent='';instructionsModal.showModal();
 });
 const closeInstructions=()=>instructionsModal.close();
 instructionsModal.querySelector('.instructions-close').addEventListener('click',closeInstructions);
@@ -218,7 +218,7 @@ document.addEventListener('click',event=>{
   customizeModal.querySelector('.customize-product-name').textContent=customizeProduct;
   Object.keys(defaults).forEach(name=>customizeModal.querySelectorAll(`input[name="${name}"]`).forEach(input=>input.checked=input.value===(saved[name]||defaults[name])));
   customizeModal.querySelector('textarea[name="instructions"]').value=readInstructions()[customizeProduct]||'';
-  customizeModal.querySelector('.customize-note').textContent='';updateCustomizationPrice();document.body.classList.add('modal-open');customizeModal.showModal();
+  customizeModal.querySelector('.customize-note').textContent='';updateCustomizationPrice();customizeModal.showModal();
 });
 customizeModal.addEventListener('change',updateCustomizationPrice);
 const closeCustomize=()=>customizeModal.close();
@@ -260,12 +260,11 @@ document.querySelectorAll('.reveal,.menu-card,.category-title,.editorial').forEa
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('video[autoplay]').forEach(video=>video.pause());
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches)addEventListener('scroll',()=>{document.querySelector('.hero-media').style.transform=`translateY(${scrollY*.12}px) scale(1.06)`},{passive:true});
 
-const booking=document.querySelector('.booking');document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{document.body.classList.add('modal-open');booking.showModal()}));
+const booking=document.querySelector('.booking');document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>booking.showModal()));
 document.querySelectorAll('.dialog-close').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
 booking.querySelector('form').addEventListener('submit',e=>{e.preventDefault();booking.querySelector('.form-note').textContent='Thanks — we’ll call shortly to confirm your table.';e.target.querySelector('button[type=submit]').textContent='Request received ✓';});
-const lightbox=document.querySelector('.lightbox');document.querySelectorAll('.gallery-grid button').forEach(b=>b.addEventListener('click',()=>{lightbox.querySelector('img').src=b.querySelector('img').src;lightbox.querySelector('img').alt=b.querySelector('img').alt;document.body.classList.add('modal-open');lightbox.showModal()}));
-const syncModalScrollLock=()=>document.body.classList.toggle('modal-open',[...document.querySelectorAll('dialog')].some(dialog=>dialog.open));
-document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('click',e=>{if(e.target===d)d.close()});d.addEventListener('close',syncModalScrollLock);d.addEventListener('cancel',()=>requestAnimationFrame(syncModalScrollLock))});
+const lightbox=document.querySelector('.lightbox');document.querySelectorAll('.gallery-grid button').forEach(b=>b.addEventListener('click',()=>{lightbox.querySelector('img').src=b.querySelector('img').src;lightbox.querySelector('img').alt=b.querySelector('img').alt;lightbox.showModal()}));
+document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close()}));
 
 const detailSections=[...document.querySelectorAll('main>section:not(.hero)')];
 const categoryPinSpacer=document.createElement('div');
