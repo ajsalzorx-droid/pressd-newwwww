@@ -1253,7 +1253,7 @@ body.menu-detail-view .menu-subsection{scroll-margin-top:220px}
 
 /* Priced Hot and Ice Beverage customization groups */
 .customize-modal .option-card b{flex:0 0 auto;margin-left:8px;color:#9a6410;font-size:8px;font-weight:850;white-space:nowrap}.customize-modal .coffee-section{grid-column:1/7}.customize-modal .milk-section{grid-column:7/13}.customize-modal .add-on-section{grid-column:1/7}.customize-modal .comment-section{grid-column:7/13}
-.customize-modal .custom-section[hidden]{display:none!important}.customize-modal.milk-only-mode{width:min(640px,calc(100% - 28px))}.customize-modal.milk-only-mode .customize-grid{grid-template-columns:1fr!important}.customize-modal.milk-only-mode .milk-section{grid-column:1!important}
+.customize-modal .custom-section[hidden]{display:none!important}.customize-modal.milk-only-mode{width:min(640px,calc(100% - 28px))}.customize-modal.milk-only-mode .customize-grid{grid-template-columns:1fr!important}.customize-modal.milk-only-mode .milk-section,.customize-modal.milk-only-mode .comment-section{grid-column:1!important}
 @media(max-width:639px){.customize-modal .coffee-section,.customize-modal .milk-section,.customize-modal .add-on-section,.customize-modal .comment-section{grid-column:auto}.customize-modal .option-card b{font-size:9px}}
 
 /* Mobile-only Customize Your Drink layout */

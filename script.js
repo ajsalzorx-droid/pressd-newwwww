@@ -212,7 +212,7 @@ document.addEventListener('click',event=>{
   const button=event.target.closest('.customize-product');if(!button)return;
   customizeProduct=button.dataset.product;customizeMode=button.dataset.customizeMode||'full';
   customizeModal.classList.toggle('milk-only-mode',customizeMode==='milk-only');
-  customizeModal.querySelector('.coffee-section').hidden=customizeMode==='milk-only';customizeModal.querySelector('.add-on-section').hidden=customizeMode==='milk-only';customizeModal.querySelector('.comment-section').hidden=customizeMode==='milk-only';
+  customizeModal.querySelector('.coffee-section').hidden=customizeMode==='milk-only';customizeModal.querySelector('.add-on-section').hidden=customizeMode==='milk-only';customizeModal.querySelector('.comment-section').hidden=false;
   const defaults=customizeMode==='milk-only'?{milk:'Fresh Milk'}:{beans:'Brazil',milk:'Fresh Milk',syrup:'None'},stored=readCustomizations()[customizeProduct],saved=stored&&(customizeMode==='milk-only'?stored.mode==='milk-only':stored.beans)?stored:defaults;
   customizeModal.querySelector('.customize-product-name').textContent=customizeProduct;
   Object.keys(defaults).forEach(name=>customizeModal.querySelectorAll(`input[name="${name}"]`).forEach(input=>input.checked=input.value===(saved[name]||defaults[name])));
@@ -226,7 +226,7 @@ customizeModal.addEventListener('click',event=>{if(event.target===customizeModal
 customizeModal.querySelector('form').addEventListener('submit',event=>{
   event.preventDefault();
   const form=new FormData(event.currentTarget),saved=readCustomizations();
-  const customization=customizeMode==='milk-only'?{mode:'milk-only',milk:form.get('milk'),extraPrice:updateCustomizationPrice()}:{beans:form.get('beans'),milk:form.get('milk'),syrup:form.get('syrup'),extraPrice:updateCustomizationPrice()},instructions=customizeMode==='milk-only'?(readInstructions()[customizeProduct]||''):String(form.get('instructions')||'').trim();
+  const customization=customizeMode==='milk-only'?{mode:'milk-only',milk:form.get('milk'),extraPrice:updateCustomizationPrice()}:{beans:form.get('beans'),milk:form.get('milk'),syrup:form.get('syrup'),extraPrice:updateCustomizationPrice()},instructions=String(form.get('instructions')||'').trim();
   saved[customizeProduct]=customization;localStorage.setItem('pressd-customizations',JSON.stringify(saved));
   const savedInstructions=readInstructions();if(instructions)savedInstructions[customizeProduct]=instructions;else delete savedInstructions[customizeProduct];localStorage.setItem('pressd-instructions',JSON.stringify(savedInstructions));
   const cartItem=cart?.find(item=>item.name===customizeProduct);
