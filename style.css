@@ -27,6 +27,7 @@ dialog{border:0;padding:0}.booking{width:min(620px,calc(100% - 24px));padding:55
 .logo:before,.logo:after{content:none}
 .logo img{display:block;width:100%;height:100%;object-fit:contain;filter:none}
 .footer-logo{width:min(72vw,760px);height:auto}
+.menu-card[aria-label="View details for Raspberry-Cano"] h4,.product-details-modal:has(.product-modal-image[alt="Raspberry-Cano"]) h2{white-space:nowrap;font-size:clamp(14px,1.35vw,18px)}
 
 /* Strict PRESS'D palette: logo yellow, near-black, white and warm cream only. */
 :root{--orange:#fbb019;--cream:#f7f1e6;--paper:#fbb019;--ink:#020303;--muted:#3e3b34}
